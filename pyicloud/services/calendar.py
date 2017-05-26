@@ -41,7 +41,7 @@ class CalendarService(object):
         today = datetime.today()
         first_day, last_day = monthrange(today.year, today.month)
         if not from_dt:
-            from_dt = datetime(today.year, today.month, first_day)
+            from_dt = datetime(today.year, today.month, first_day + 1) 
         if not to_dt:
             to_dt = datetime(today.year, today.month, last_day)
         params = dict(self.params)
